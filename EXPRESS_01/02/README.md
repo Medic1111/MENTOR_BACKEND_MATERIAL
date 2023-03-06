@@ -110,7 +110,6 @@ const limiter = rateLimit({
 - Picking individual middlewares instead of using all:
 
 ```
-import * as helmet from "helmet";
 
 app.use(helmet.contentSecurityPolicy());
 app.use(helmet.crossOriginEmbedderPolicy());
