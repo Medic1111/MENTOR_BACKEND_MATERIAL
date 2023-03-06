@@ -17,7 +17,7 @@ app.get("/api/v1/test", (req, res) => {
 
 // UNHANDLED ROUTES
 app.all("*", (req, res) => {
-  res.status(404).json({ message: `${req.url} is not supported` });
+  res.status(404).json({ message: `${req.originalUrl} is not supported` });
 });
 
 // SETUP SERVER TO LISTEN ON A PORT

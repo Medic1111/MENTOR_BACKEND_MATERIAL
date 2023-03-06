@@ -47,6 +47,13 @@ app.get("/api/v1/test", (req,res)=>{
 
 6. Handling unhandled routes (routes that are not supported by the server):
 
+```
+app.all("*", (req, res) => {
+  res.status(404).json({ message: `${req.originalUrl} is not supported` });
+});
+
+```
+
 7. Allowing server to "listen" for requests:
 
 ```
