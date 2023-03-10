@@ -1,0 +1,32 @@
+# TESTIN VALIDATION ERRORS FROM MONGOOSE
+
+POST http://localhost:3002/api/v1/user HTTP/1.1
+Content-Type: application/json
+
+{
+  "username": "fa"
+}
+
+###
+
+# TESTIN DUPLICATION ERRORS FROM MONGOOSE
+
+POST http://localhost:3002/api/v1/user HTTP/1.1
+Content-Type: application/json
+
+{
+  "username": "fabiomarins"
+}
+
+###
+
+# TESTING CAST ERRORS (invalid object _id) FROM MONGOOSE
+
+GET http://localhost:3002/api/v1/user HTTP/1.1
+Content-Type: application/json
+
+{
+  "username": "fabiomarins"
+}
+
+###
